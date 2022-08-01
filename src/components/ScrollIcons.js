@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button} from 'react-bootstrap'
 import { ScrollMenu,VisibilityContext } from "react-horizontal-scrolling-menu"
 import "./hideScrollbar.css";
 
@@ -9,7 +10,7 @@ export default function ScrollIcons({categories}){
        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
             {categories.map((category)=>(
               <div key={category.id} className='text-center me-5 mt-5'>
-                <img src={category.image} alt={category.title} style={{width: 30, height:30}}/>
+                <Button variant='outline-light'><img src={category.image} alt={category.title} style={{width: 30, height:30}}/></Button>
                 <h6 style={{fontSize:7, marginTop: 5}}>{category.title}</h6>
               </div>
             ))}
