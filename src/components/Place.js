@@ -1,10 +1,11 @@
 import {Image} from 'react-bootstrap';
 import {AiFillStar} from 'react-icons/ai';
+import {Link} from 'react-router-dom'
 
 export default function Place({place}){
     return(
         <div className='col-3 my-3 mx-0 '>
-            <Image fluid src={place.images[0]} style={{height: 300, width: 350, borderRadius: 20}}/>
+            <Link to={`/details/${place.id}`}><Image fluid src={place.images[0]} style={{height: 300, width: 350, borderRadius: 20}}/></Link>
             <div className='row m-1 mt-3'>
                 <div className='col-8'> 
                     <h5>{place.locationTitle}</h5>
